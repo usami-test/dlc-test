@@ -4,8 +4,7 @@ jobs:
    docker:
      - image: cimg/go:1.13
    steps:
-     - run: echo hello
-     # - checkout
-     # - setup_remote_docker:
-     #     docker_layer_caching: true
-     # - run: docker build .
+     - checkout
+     - setup_remote_docker:
+         docker_layer_caching: true
+     - run: docker build .
